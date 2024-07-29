@@ -57,17 +57,32 @@ let curruntIndex = 0;
 
 
 function showQuestion(){
+    resertStart();
     let currectQuction = questions[curruntIndex];
     let qusestionNo = curruntIndex + 1;
     qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
+
+    currectQuction.answers.forEach(ans => {
+        let button = document.createElement("button");
+        button.innerHTML = ans.text;
+        button.classList.add("ans");
+        ansBtn.appendChild(button);
+    });
 };
 
 function handleQuestion(){
     curruntIndex++;
-}
+};
 
 nextBtn.addEventListener("click", ()=>{
     handleQuestion();
-})
+});
+
+function resertStart(){
+    nextBtn.style.display = "none";
+    while(ansBtn.firstChild){
+        ansBtn.removeChild(ansBtn.firstChild);
+    }
+}
 
 showQuestion();
