@@ -67,6 +67,10 @@ function showQuestion(){
         button.innerHTML = ans.text;
         button.classList.add("ans");
         ansBtn.appendChild(button);
+        if(ans.correct){
+            button.dataset.correct = ans.correct;
+        }
+        button.addEventListener("click", selectAns)
     });
 };
 
@@ -83,6 +87,10 @@ function resertStart(){
     while(ansBtn.firstChild){
         ansBtn.removeChild(ansBtn.firstChild);
     }
+};
+
+function selectAns(){
+    
 }
 
 showQuestion();
