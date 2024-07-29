@@ -54,7 +54,15 @@ let nextBtn = document.getElementById("nextbtn");
 
 
 let curruntIndex = 0;
+let score = 0;
 
+function startQuiz(){
+    curruntIndex = 0;
+    score = 0;
+    nextBtn.innerHTML = "Next";
+    showQuestion();
+
+}
 
 function showQuestion(){
     resertStart();
@@ -76,10 +84,19 @@ function showQuestion(){
 
 function handleQuestion(){
     curruntIndex++;
+    if(curruntIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
 };
 
 nextBtn.addEventListener("click", ()=>{
-    handleQuestion();
+    if(curruntIndex < questions.length){
+        handleQuestion();
+    }else{
+        startQuiz();
+    }
 });
 
 function resertStart(){
@@ -89,8 +106,26 @@ function resertStart(){
     }
 };
 
-function selectAns(){
-    
-}
+function selectAns(e){
+    let selectedAns = e.target;
+    let iscorrect = selectedAns.dataset.correct === "true";
+
+    if(iscorrect){
+        selectedAns.classList.add("correct");
+    }else{
+        selectedAns.classList.add("incorrect");
+    }
+
+    Array.from(ansBtn.children).forEach(button =>{
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextBtn.style.display = "block";
+};
+
+
+
 
 showQuestion();

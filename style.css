@@ -58,8 +58,11 @@ hr{
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-.ans:hover{
+.ans:hover:not([disabled]){
     background-color: black;
+}
+.ans[disabled]{
+    cursor: no-drop;
 }
 #nextbtn{
     display: block;
@@ -75,4 +78,12 @@ hr{
 }
 #nextbtn:hover{
     background-color: #5634ed;
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
 }
