@@ -57,9 +57,17 @@ let curruntIndex = 0;
 
 
 function showQuestion(){
-    let currectQuction = curruntIndex.questions;
+    let currectQuction = questions[curruntIndex];
     let questionNo = currectQuction + 1;
     qustionElement.innerHTML = questionNo + ". " + currectQuction.question;
+};
+
+function handleQuestion(){
+    curruntIndex++;
 }
+
+nextBtn.addEventListener("click", ()=>{
+    handleQuestion();
+})
 
 showQuestion();
