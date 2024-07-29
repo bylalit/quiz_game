@@ -112,6 +112,7 @@ function selectAns(e){
 
     if(iscorrect){
         selectedAns.classList.add("correct");
+        score++;
     }else{
         selectedAns.classList.add("incorrect");
     }
@@ -126,6 +127,11 @@ function selectAns(e){
 };
 
 
-
+function showScore(){
+    resertStart();
+    qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextBtn.innerHTML = "Play Again";
+    nextBtn.style.display = "block";
+}
 
 showQuestion();
