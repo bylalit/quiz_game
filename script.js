@@ -52,3 +52,14 @@ let qustionElement = document.getElementById("qustion-element");
 let ansBtn = document.getElementById("ans-btn");
 let nextBtn = document.getElementById("nextbtn");
 
+
+let curruntIndex = 0;
+
+
+function showQuestion(){
+    let currectQuction = curruntIndex.questions;
+    let questionNo = currectQuction + 1;
+    qustionElement.innerHTML = questionNo + ". " + currectQuction.question;
+}
+
+showQuestion();
