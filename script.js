@@ -58,8 +58,8 @@ let curruntIndex = 0;
 
 function showQuestion(){
     let currectQuction = questions[curruntIndex];
-    let questionNo = currectQuction + 1;
-    qustionElement.innerHTML = questionNo + ". " + currectQuction.question;
+    let qusestionNo = curruntIndex + 1;
+    qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
 };
 
 function handleQuestion(){
