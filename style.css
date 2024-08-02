@@ -24,7 +24,7 @@ body{
     /* display: flex;
     flex-direction: column; */
 }
-/* h2{
+h2{
     color: #5634ed;
     text-align: center;
     font-size: 2rem;
@@ -88,4 +88,4 @@ hr{
 
 .incorrect{
     background-color: red;
-} */
+}
