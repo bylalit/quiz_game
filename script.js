@@ -106,32 +106,32 @@ function resertStart(){
     }
 };
 
-function selectAns(e){
-    let selectedAns = e.target;
-    let iscorrect = selectedAns.dataset.correct === "true";
+// function selectAns(e){
+//     let selectedAns = e.target;
+//     let iscorrect = selectedAns.dataset.correct === "true";
 
-    if(iscorrect){
-        selectedAns.classList.add("correct");
-        score++;
-    }else{
-        selectedAns.classList.add("incorrect");
-    }
+//     if(iscorrect){
+//         selectedAns.classList.add("correct");
+//         score++;
+//     }else{
+//         selectedAns.classList.add("incorrect");
+//     }
 
-    Array.from(ansBtn.children).forEach(button =>{
-        if(button.dataset.correct === "true"){
-            button.classList.add("correct");
-        }
-        button.disabled = true;
-    });
-    nextBtn.style.display = "block";
-};
+//     Array.from(ansBtn.children).forEach(button =>{
+//         if(button.dataset.correct === "true"){
+//             button.classList.add("correct");
+//         }
+//         button.disabled = true;
+//     });
+//     nextBtn.style.display = "block";
+// };
 
 
-function showScore(){
-    resertStart();
-    qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextBtn.innerHTML = "Play Again";
-    nextBtn.style.display = "block";
-}
+// function showScore(){
+//     resertStart();
+//     qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+//     nextBtn.innerHTML = "Play Again";
+//     nextBtn.style.display = "block";
+// }
 
-showQuestion();
+// showQuestion();
