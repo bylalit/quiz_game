@@ -56,31 +56,31 @@ let nextBtn = document.getElementById("nextbtn");
 let curruntIndex = 0;
 let score = 0;
 
-// function startQuiz(){
-//     curruntIndex = 0;
-//     score = 0;
-//     nextBtn.innerHTML = "Next";
-//     showQuestion();
+function startQuiz(){
+    curruntIndex = 0;
+    score = 0;
+    nextBtn.innerHTML = "Next";
+    showQuestion();
 
-// }
+}
 
-// function showQuestion(){
-//     resertStart();
-//     let currectQuction = questions[curruntIndex];
-//     let qusestionNo = curruntIndex + 1;
-//     qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
+function showQuestion(){
+    resertStart();
+    let currectQuction = questions[curruntIndex];
+    let qusestionNo = curruntIndex + 1;
+    qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
 
-//     currectQuction.answers.forEach(ans => {
-//         let button = document.createElement("button");
-//         button.innerHTML = ans.text;
-//         button.classList.add("ans");
-//         ansBtn.appendChild(button);
-//         if(ans.correct){
-//             button.dataset.correct = ans.correct;
-//         }
-//         button.addEventListener("click", selectAns)
-//     });
-// };
+    currectQuction.answers.forEach(ans => {
+        let button = document.createElement("button");
+        button.innerHTML = ans.text;
+        button.classList.add("ans");
+        ansBtn.appendChild(button);
+        if(ans.correct){
+            button.dataset.correct = ans.correct;
+        }
+        button.addEventListener("click", selectAns)
+    });
+};
 
 function handleQuestion(){
     curruntIndex++;
@@ -127,11 +127,11 @@ function selectAns(e){
 };
 
 
-function showScore(){
-    resertStart();
-    qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextBtn.innerHTML = "Play Again";
-    nextBtn.style.display = "block";
-}
+// function showScore(){
+//     resertStart();
+//     qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+//     nextBtn.innerHTML = "Play Again";
+//     nextBtn.style.display = "block";
+// }
 
-showQuestion();
+// showQuestion();
