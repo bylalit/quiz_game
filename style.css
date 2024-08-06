@@ -78,7 +78,7 @@ hr{
     border: none;
     border-radius: 0.5rem;
 }
-/* #nextbtn:hover{
+#nextbtn:hover{
     background-color: #5634ed;
 }
 
@@ -88,4 +88,4 @@ hr{
 
 .incorrect{
     background-color: red;
-} */
+}
