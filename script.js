@@ -127,11 +127,11 @@ function selectAns(e){
 };
 
 
-function showScore(){
-    resertStart();
-    qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextBtn.innerHTML = "Play Again";
-    nextBtn.style.display = "block";
-}
+// function showScore(){
+//     resertStart();
+//     qustionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+//     nextBtn.innerHTML = "Play Again";
+//     nextBtn.style.display = "block";
+// }
 
-showQuestion();
+// showQuestion();
