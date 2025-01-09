@@ -64,23 +64,23 @@ function startQuiz(){
 
 }
 
-function showQuestion(){
-    resertStart();
-    let currectQuction = questions[curruntIndex];
-    let qusestionNo = curruntIndex + 1;
-    qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
+// function showQuestion(){
+//     resertStart();
+//     let currectQuction = questions[curruntIndex];
+//     let qusestionNo = curruntIndex + 1;
+//     qustionElement.innerHTML = qusestionNo + ". " + currectQuction.question;
 
-    currectQuction.answers.forEach(ans => {
-        let button = document.createElement("button");
-        button.innerHTML = ans.text;
-        button.classList.add("ans");
-        ansBtn.appendChild(button);
-        if(ans.correct){
-            button.dataset.correct = ans.correct;
-        }
-        button.addEventListener("click", selectAns)
-    });
-};
+//     currectQuction.answers.forEach(ans => {
+//         let button = document.createElement("button");
+//         button.innerHTML = ans.text;
+//         button.classList.add("ans");
+//         ansBtn.appendChild(button);
+//         if(ans.correct){
+//             button.dataset.correct = ans.correct;
+//         }
+//         button.addEventListener("click", selectAns)
+//     });
+// };
 
 function handleQuestion(){
     curruntIndex++;
