@@ -30,7 +30,7 @@ h2{
     font-size: 2rem;
     padding: 1rem 0rem 1rem;
 }
-/* hr{
+hr{
     border: 1px solid black;
     width: 65vw;
     display: block;
@@ -59,7 +59,7 @@ h2{
     border-radius: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease-in;
-} */
+}
 .ans:hover:not([disabled]){
     background-color: black;
 }
