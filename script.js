@@ -82,22 +82,22 @@ function showQuestion(){
     });
 };
 
-function handleQuestion(){
-    curruntIndex++;
-    if(curruntIndex < questions.length){
-        showQuestion();
-    }else{
-        showScore();
-    }
-};
+// function handleQuestion(){
+//     curruntIndex++;
+//     if(curruntIndex < questions.length){
+//         showQuestion();
+//     }else{
+//         showScore();
+//     }
+// };
 
-nextBtn.addEventListener("click", ()=>{
-    if(curruntIndex < questions.length){
-        handleQuestion();
-    }else{
-        startQuiz();
-    }
-});
+// nextBtn.addEventListener("click", ()=>{
+//     if(curruntIndex < questions.length){
+//         handleQuestion();
+//     }else{
+//         startQuiz();
+//     }
+// });
 
 function resertStart(){
     nextBtn.style.display = "none";
