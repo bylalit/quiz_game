@@ -30,7 +30,7 @@ h2 {
   font-size: 2rem;
   padding: 1rem 0rem 1rem;
 }
-/* hr {
+hr {
   border: 1px solid black;
   width: 65vw;
   display: block;
@@ -47,7 +47,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-} */
+}
 .ans {
   text-align: start;
   padding: 0.5rem 2rem;
