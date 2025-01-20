@@ -43,7 +43,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-/* #ans-btn {
+#ans-btn {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -88,4 +88,4 @@ hr {
 
 .incorrect {
   background-color: red;
-} */
+}
